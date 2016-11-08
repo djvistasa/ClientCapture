@@ -33,9 +33,6 @@
   }
 }
 
-
-
-
 .form-section, .bottom-wrapper {
   height: 100%;
   background: #333333;
@@ -52,6 +49,12 @@
   left: 0;
   margin: auto;
   top: 90px;
+
+    label {
+      color: #fff;
+      font-size: 20px;
+      display: block;
+    }
 }
 
 .form-section form .field.login input {

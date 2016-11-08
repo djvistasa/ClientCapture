@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     logger.info(current_user.email)
   end
 
+
   def client
     @current = current_user
 
@@ -20,6 +21,16 @@ class HomeController < ApplicationController
     @current = current_user
 
     @client = Client.find_by(id: params[:id])
+  end
+
+  def admin_logout
+    sign_out current_user
+    #after_sign_out_path_for(User)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
 
   end
 end
