@@ -192,6 +192,18 @@
           line-height: 80px;
           width: 100%;
           font-size: 30px;
+          position: relative;
+            span {
+              width: 80px;
+              height: 80px;
+              display: block;
+              position: absolute;
+              right: 0;
+              background: url("cros-icon-white.png") no-repeat center ;
+              background-size: 50% ;
+              top: 0;
+
+            }
         }
 
       input[type="text"], .address {
