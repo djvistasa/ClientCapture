@@ -24,58 +24,73 @@
               <%= image_tag @client.avatar.url(:medium) %>
             </div>
             <div class="client-details">
-                <div class="client-details-line">
+              <div class="client-details-line">
                   <span>
                     Name:
                   </span>
                   <span>
                     <%= @client.name %>
                   </span>
-                </div>
-                <div class="client-details-line">
+              </div>
+              <div class="client-details-line">
                   <span>
                     Surname:
                   </span>
                   <span>
                     <%= @client.surname %>
                   </span>
-                </div>
-                <div class="client-details-line">
+              </div>
+              <div class="client-details-line">
                   <span>
                     Gender:
                   </span>
                   <span>
                     <%# @client.gender %>
                   </span>
-                </div>
-                <div class="client-details-line">
+              </div>
+              <div class="client-details-line">
                   <span>
                     Tel:
                   </span>
                   <span>
                     <%= @client.cellnumber %>
                   </span>
-                </div>
-                <div class="client-details-line">
+              </div>
+              <div class="client-details-line">
                   <span>
                     Email:
                   </span>
                   <span>
                     <%= @client.email %>
                   </span>
-                </div>
-                <div class="client-details-line">
+              </div>
+              <div class="client-details-line">
                   <span>
                     Address:
                   </span>
                   <span>
                     <%= @client.address %>
                   </span>
-                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="formOverlay">
+  <%= semantic_form_for(@client) do |f| %>
+      <% f.inputs do %>
+          <h2>Add new Client</h2>
+          <%= f.input :name %>
+          <%= f.input :surname %>
+          <%= f.input :cellnumber %>
+          <%= f.input :email, as: :string %>
+          <%= f.input :address %>
+          <%= f.input :avatar, as: :file %>
+          <%= f.actions  %>
+      <% end %>
+  <% end %>
 </div>
