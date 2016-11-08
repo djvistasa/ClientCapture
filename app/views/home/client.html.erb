@@ -19,7 +19,7 @@
           </div>
 
           <a href="/" class="back-btn">Back</a>
-          <%= link_to 'Delete', @client, :confirm => 'Are you sure?', :method => :delete, :class => 'delete-btn'  %>
+          <%= link_to 'Delete', @client, data: { confirm: "Are you sure?"}, :method => :delete, :class => 'delete-btn'  %>
 
         </div>
         <div class="client-overview">
