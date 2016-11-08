@@ -4,41 +4,45 @@
   height: 357px;
   display: block;
   position: absolute;
+
+  .logo {
+    width: 348px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url('mali.png') center;
+    height: 276px;
+    bottom: 0;
+    top: 0;
+  }
+
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #fff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    /* border: 0; */
+    bottom: -50px;
+    z-index: 99;
+  }
 }
 
-.header-section .logo {
-  width: 348px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background: url('mali.png') center;
-  height: 276px;
-  bottom: 0;
-  top: 0;
-}
-.header-section .arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 50px solid #fff;
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  /* border: 0; */
-  bottom: -50px;
-  z-index: 99;
-}
 
 
-.form-section {
-  height: calc(100vh - 357px);
+
+.form-section, .bottom-wrapper {
+  height: 100%;
   background: #333333;
   position: absolute;
   bottom: 0;
   width: 100%;
+  top: 357px;
 }
 
 .form-section form {
@@ -113,3 +117,10 @@
   text-indent: -144px;
   margin-top: 101px;
 }
+
+
+
+.bottom-wrapper {
+
+}
+

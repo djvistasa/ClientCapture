@@ -1,0 +1,103 @@
+.dashboard {
+  .header-section {
+
+    .logo {
+      right: auto;
+      left: 30px;
+    }
+
+    .mainUser {
+      width: 320px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      font-size: 27px;
+      color: #000;
+      text-align: center;
+      h2 {
+        font-size: 60px;
+        margin-bottom: 0;
+        margin-top: 46px;
+        font-weight: bold;
+      }
+    }
+
+    .session-info {
+      width: 350px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      img {
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        top: -60px;
+        right: 0;
+        left: 0;
+      }
+
+      .search-bar {
+        input {
+          width: 288px;
+          height: 50px;
+          border-radius: 5px;
+          background: #e1d5d5;
+          border: none;
+          outline: none;
+          position: absolute;
+          bottom: 20px;
+          font-size: 20px;
+          padding: 0 10px;
+          background-image: url("search-icon.png");
+          background-repeat: no-repeat;
+          background-size: 40px;
+          background-position: right center;
+        }
+      }
+    }
+
+  }
+  .bottom-wrapper {
+    padding-bottom: 100px;
+  }
+
+  .menu-panel {
+    width: 353px;
+    height: 100%;
+    float: left;
+  }
+  .userWrapper {
+    background: #ffffff;
+    float: left;
+    height: 100%;
+    width: calc(100vw - 376px);
+    margin-top: 100px;
+    /* position: relative; */
+    position: absolute;
+    left: 353px;
+
+      .user-inner {
+        width: 90%;
+        margin: 40px auto;
+
+          .user-list {
+            li {
+              list-style-type: none;
+              float: left;
+              width: 300px;
+              height: 300px;
+              position: relative;
+              margin-right: 50px;
+            }
+          }
+
+      }
+
+  }
+
+}
