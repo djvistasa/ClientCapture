@@ -33,6 +33,16 @@ class HomeController < ApplicationController
     end
   end
 
+  def delete_client
+    @client = Client.find_by(id: params[:id])
+    @client.destroy
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.json { head :no_content }
+    end
+  end
+
   def admin_logout
     sign_out current_user
     #after_sign_out_path_for(User)
