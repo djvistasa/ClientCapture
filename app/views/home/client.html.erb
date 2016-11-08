@@ -1,0 +1,81 @@
+<div class="dashboard">
+
+  <%= render 'home/header' %>
+
+  <div class="bottom-wrapper">
+    <div class="menu-panel">
+      <div class="logout menu-item">
+        Logout
+      </div>
+    </div>
+    <div class="userWrapper">
+      <div class="user-inner">
+        <div class="clearfix">
+          <div class="clients-title">
+            <h2>Client Overview</h2>
+          </div>
+          <div class="add-client">
+            Edit
+          </div>
+        </div>
+        <div class="client-overview">
+          <div class="clearfix">
+            <div class="image-area">
+              <%= image_tag @client.avatar.url(:medium) %>
+            </div>
+            <div class="client-details">
+                <div class="client-details-line">
+                  <span>
+                    Name:
+                  </span>
+                  <span>
+                    <%= @client.name %>
+                  </span>
+                </div>
+                <div class="client-details-line">
+                  <span>
+                    Surname:
+                  </span>
+                  <span>
+                    <%= @client.surname %>
+                  </span>
+                </div>
+                <div class="client-details-line">
+                  <span>
+                    Gender:
+                  </span>
+                  <span>
+                    <%# @client.gender %>
+                  </span>
+                </div>
+                <div class="client-details-line">
+                  <span>
+                    Tel:
+                  </span>
+                  <span>
+                    <%= @client.cellnumber %>
+                  </span>
+                </div>
+                <div class="client-details-line">
+                  <span>
+                    Email:
+                  </span>
+                  <span>
+                    <%= @client.email %>
+                  </span>
+                </div>
+                <div class="client-details-line">
+                  <span>
+                    Address:
+                  </span>
+                  <span>
+                    <%= @client.address %>
+                  </span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

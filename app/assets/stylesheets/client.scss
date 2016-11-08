@@ -1,0 +1,53 @@
+.client_link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.client-overview {
+
+  .image-area {
+    width: 285px;
+    min-height: 1px;
+    height: auto;
+
+    margin: 0px 65px 0px 0px;
+
+    float: left;
+
+
+    img{
+      width:100%;
+      height: auto;
+    }
+  }
+
+  .client-details {
+
+    line-height: 60px;
+    text-indent: 25px;
+    font-size: 25px;
+    color: #000;
+
+    float: left;
+    width:900px;
+
+    .client-details-line {
+      width:100%;
+      display: table;
+      table-layout: fixed;
+      > span {
+        display: table-cell;
+
+        &:first-of-type{
+          width: 190px;
+        }
+
+      }
+    }
+
+  }
+
+}

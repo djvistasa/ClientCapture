@@ -9,4 +9,17 @@ class HomeController < ApplicationController
 
     logger.info(current_user.email)
   end
+
+  def client
+    @current = current_user
+
+    @client = Client.find_by(id: params[:id])
+  end
+
+  def edit_client
+    @current = current_user
+
+    @client = Client.find_by(id: params[:id])
+
+  end
 end
