@@ -1,3 +1,7 @@
+<div class="mainUser">
+Welcome,
+  <%= @current.name + ' ' + @current.surname %>
+</div>
 <div class="userWrapper">
   <div class="Clients-title">
     Clients
@@ -9,8 +13,9 @@
           <%= client.name + ' ' + client.surname %>
         </div>
         <div class="client-avatar">
-          <%= image_tag(client.avatar.url) %>
+          <%= image_tag(client.avatar.url(:medium)) %>
         </div>
+        <input type="hidden" value="<%=client.id  %>" />
       </li>
     <% end %>
   </ul>

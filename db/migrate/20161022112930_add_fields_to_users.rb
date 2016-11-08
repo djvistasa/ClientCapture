@@ -7,3 +7,5 @@ class AddFieldsToUsers < ActiveRecord::Migration[5.0]
   end
   add_attachment :users, :avatar
 end
+
+
