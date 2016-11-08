@@ -80,9 +80,8 @@
   </div>
 </div>
 
-<div class="formOverlay">
+<div class="formOverlay client">
   <%= semantic_form_for(@client) do |f| %>
-      <% f.inputs do %>
           <h2>Add new Client</h2>
           <%= f.input :name %>
           <%= f.input :surname %>
@@ -91,6 +90,5 @@
           <%= f.input :address %>
           <%= f.input :avatar, as: :file %>
           <%= f.actions  %>
-      <% end %>
   <% end %>
 </div>

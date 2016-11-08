@@ -51,3 +51,25 @@
   }
 
 }
+
+.client form fieldset.inputs{
+  background: transparent;
+  border-radius: 0;
+}
+.client
+form input[type=submit]{
+  width: 205px;
+  height: 57px;
+  border-radius: 8px;
+  background: #df1e1f;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  line-height: 57px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
