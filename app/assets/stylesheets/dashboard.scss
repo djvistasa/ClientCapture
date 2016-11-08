@@ -160,3 +160,80 @@
 
 }
 
+.formOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9;
+
+    form {
+      width: 600px;
+      height: 900px;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #333333;
+
+        label {
+          display: block;
+          margin: 10px 20px;
+          font-size: 18px;
+          color: #ffffff;
+        }
+        h2 {
+          background: #000;
+          color: #ffffff;
+          height: 80px;
+          text-align: center;
+          line-height: 80px;
+          width: 100%;
+          font-size: 30px;
+        }
+
+      input[type="text"], .address {
+        border: none;
+        background-color: white;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 90%;
+        margin: auto 18px;
+      }
+
+      input[type="file"] {
+        width: 90%;
+        color: #ffffff;
+        margin: auto 20px;
+        outline: none;
+      }
+
+      .address {
+        height: 100px;
+        resize: vertical;
+      }
+
+      .submit {
+        width: 205px;
+        height: 57px;
+        border-radius: 8px;
+        background: #df1e1f;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        right: 20px;
+        text-align: center;
+        line-height: 57px;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+}
+

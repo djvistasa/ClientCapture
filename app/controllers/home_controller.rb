@@ -9,4 +9,14 @@ class HomeController < ApplicationController
 
     logger.info(current_user.email)
   end
+
+  def admin_logout
+    sign_out current_user
+    #after_sign_out_path_for(User)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 end

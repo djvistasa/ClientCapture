@@ -5,7 +5,21 @@ $(document).ready(function(){
 
     
 
-    $('body').on('click', '.user-list li', function(){
-        console.log($(this).children().last().val());
+    $('body').on('click', '.logout', function(){
+        $.ajax({
+            url: '/admin_logout',
+            dataType: 'script',
+            beforeSend: function(){
+
+            },
+            data: {},
+            success: function(data) {
+                location.reload();
+            }
+        });
+    });
+
+    $('body').on('click', '.add-client', function(){
+       
     });
 });
