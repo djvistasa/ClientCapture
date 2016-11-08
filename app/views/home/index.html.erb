@@ -20,24 +20,8 @@
   </form>
 </div>
 <div class="dashboard">
-  <div class="header-section dashboard">
-    <div class="logo"></div>
-    <div class="mainUser">
-      <h2 class="pageTitle">
-        Dashboard
-      </h2>
-      Welcome
-      <%= @current.name + ' ' + @current.surname %>
-    </div>
-    <div class="session-info">
-      <%= image_tag(@current.avatar.url(:medium)) %>
-      <div class="search-bar">
-        <input type="text" name="search" placeholder="client search" />
 
-      </div>
-    </div>
-
-  </div>
+  <%= render 'home/header' %>
 
   <div class="bottom-wrapper">
     <div class="menu-panel">
@@ -56,6 +40,7 @@
         <ul class="user-list">
           <%@clients.each do |client| %>
               <li>
+                <%= link_to "" , client_path(client), class: "client_link" %>
                 <div class="client-name">
                   <%= client.name + ' ' + client.surname %>
                 </div>

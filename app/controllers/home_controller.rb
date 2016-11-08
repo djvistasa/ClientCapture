@@ -6,8 +6,29 @@ class HomeController < ApplicationController
   def index
     @clients = Client.all
     @current = current_user
+    @client = Client.new
 
-    logger.info(current_user.email)
+  end
+
+
+  def client
+    @current = current_user
+
+    @client = Client.find_by(id: params[:id])
+  end
+
+  def edit_client
+    @current = current_user
+
+    @client = Client.find_by(id: params[:id])
+  end
+
+  def create_client
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def admin_logout
@@ -18,5 +39,6 @@ class HomeController < ApplicationController
       format.html
       format.js
     end
+
   end
 end

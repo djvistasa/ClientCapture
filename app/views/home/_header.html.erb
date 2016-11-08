@@ -1,0 +1,18 @@
+<% logger.info(@current) %>
+<div class="header-section dashboard">
+  <div class="logo"></div>
+  <div class="mainUser">
+    <h2 class="pageTitle">
+      Dashboard
+    </h2>
+    Welcome
+    <%= @current.name + ' ' + @current.surname %>
+  </div>
+  <div class="session-info">
+    <%= image_tag(@current.avatar.url(:medium)) %>
+    <div class="search-bar">
+      <input type="text" name="search" placeholder="client search" />
+    </div>
+  </div>
+
+</div>
