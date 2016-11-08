@@ -34,6 +34,30 @@ class HomeController < ApplicationController
   end
 
   def create_client
+    @data = { success: 0, message: "Invalid request!" }
+
+    client = Client.create(
+        name: params['name'],
+        surname: params['surname'],
+        cellnumber: 'cellnumber',
+        email: params['email'],
+        address: params['address'],
+        avatar: params['avatar']
+    )
+
+
+    if client.save
+      @data = {
+          message: "client created succesfully",
+          success: 1,
+      }
+
+    else
+      @data[:message] = client.errors.full_messages
+
+    end
+
+    @clients = Client.all
 
     respond_to do |format|
       format.html

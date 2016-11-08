@@ -14,9 +14,9 @@
     <textarea class="address"></textarea>
     <label>Avatar</label>
     <input type="file" name="avatar" />
-     <div class="submit">
+     <button class="submit">
        Create
-     </div>
+     </button>
   </form>
 </div>
 <div class="dashboard">
@@ -38,18 +38,7 @@
           Add new client
         </div>
         <ul class="user-list">
-          <%@clients.each do |client| %>
-              <li>
-                <%= link_to "" , client_path(client), class: "client_link" %>
-                <div class="client-name">
-                  <%= client.name + ' ' + client.surname %>
-                </div>
-                <div class="client-avatar">
-                  <%= image_tag(client.avatar.url(:avatar)) %>
-                </div>
-                <input type="hidden" value="<%=client.id  %>" />
-              </li>
-          <% end %>
+          <%= render 'home/clientsList' %>
         </ul>
       </div>
     </div>

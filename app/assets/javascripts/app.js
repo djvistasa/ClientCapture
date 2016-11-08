@@ -3,7 +3,17 @@
  */
 $(document).ready(function(){
 
-    
+    $('#client-form').ajaxForm({
+        url: '/create_client',
+        type: 'POST',
+        dataType: 'script',
+        beforeSubmit: function(){
+            console.log('hello');
+        },
+        success: function(){
+            $('.formOverlay').css('display', 'none');
+        }
+    });
 
     $('body').on('click', '.logout', function(){
         $.ajax({
@@ -27,15 +37,7 @@ $(document).ready(function(){
     });
 
     $('body').on('click', '.submit', function(){
-        console.log('hello');
-       $('#client-form').ajaxForm({
-           url: "/create_client",
-           beforeSubmit: function(){
 
-           },
-           success: function(){
 
-           }
-       });;
     });
 });

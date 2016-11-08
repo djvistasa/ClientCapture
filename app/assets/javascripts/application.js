@@ -17,4 +17,5 @@
 //= require react_ujs
 //= require components
 //= require jquery.form
-//= require_tree .
+//= require app
+
