@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   match "/clients/:id" => "home#client", :via => [:get], as: 'client'
   match "/clients/:id" => "home#edit_client", :via => [:patch, :put]
+  match "/clients/:id" => "home#delete_client", :via => [:delete]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

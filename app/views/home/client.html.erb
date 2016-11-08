@@ -17,6 +17,10 @@
           <div class="add-client">
             Edit
           </div>
+
+          <a href="/" class="back-btn">Back</a>
+          <%= link_to 'Delete', @client, :confirm => 'Are you sure?', :method => :delete, :class => 'delete-btn'  %>
+
         </div>
         <div class="client-overview">
           <div class="clearfix">
@@ -80,9 +84,8 @@
   </div>
 </div>
 
-<div class="formOverlay">
+<div class="formOverlay client">
   <%= semantic_form_for(@client) do |f| %>
-      <% f.inputs do %>
           <h2>Add new Client</h2>
           <%= f.input :name %>
           <%= f.input :surname %>
@@ -91,6 +94,5 @@
           <%= f.input :address %>
           <%= f.input :avatar, as: :file %>
           <%= f.actions  %>
-      <% end %>
   <% end %>
 </div>
