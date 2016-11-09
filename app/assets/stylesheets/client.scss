@@ -105,3 +105,14 @@
   text-shadow: none;
 }
 
+.client form textarea{
+  border: none;
+  background-color: white;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 90%;
+  margin: auto 11px;
+  height: 100px;
+  resize: vertical;
+}

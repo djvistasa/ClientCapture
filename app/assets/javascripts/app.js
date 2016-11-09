@@ -40,4 +40,10 @@ $(document).ready(function(){
 
 
     });
+
+
+    $('body').on('click', '.add-client', function(){
+        $('.formOverlay').show();
+    });
+
 });
