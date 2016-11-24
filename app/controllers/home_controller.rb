@@ -10,13 +10,16 @@ class HomeController < ApplicationController
 
   end
 
-
+  #clients
   def client
     @current = current_user
 
     @client = Client.find_by(id: params[:id])
-  end
 
+    @cases = @client.cases
+
+    @case = Case.new
+  end
   def edit_client
     @current = current_user
 
@@ -32,7 +35,6 @@ class HomeController < ApplicationController
       end
     end
   end
-
   def create_client
     @data = { success: 0, message: "Invalid request!" }
 
@@ -75,6 +77,34 @@ class HomeController < ApplicationController
     end
   end
 
+  #cases
+  def case
+
+    @case = Case.find_by(id: params[:id])
+
+  end
+  def create_case
+    @case = Case.create(
+        case_number: params['case_number'],
+        title: params['title'],
+        status: params['status'],
+        date: params['date'],
+        client_id: params['client_id']
+    )
+
+    @case.save
+
+    @client = @case.client
+
+    @cases = @client.cases
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+
   def admin_logout
     sign_out current_user
     #after_sign_out_path_for(User)
@@ -90,5 +120,9 @@ class HomeController < ApplicationController
 
   def client_params
     params.require(:client).permit(:name,:surname,:email,:cellnumber, :address,:avatar)
+  end
+
+  def case_params
+    params.require(:case).permit(:case_number,:title,:status,:date,:client_id)
   end
 end

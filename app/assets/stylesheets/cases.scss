@@ -1,0 +1,83 @@
+.case-overview {
+
+  h3 {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .case {
+    &.heading {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+
+    line-height: 20px;
+
+    > div {
+      float: left;
+      min-height: 1px;
+    }
+
+    .reference {
+      width: 15%;
+    }
+    .case-title {
+      width: 40%;
+    }
+    .status {
+      width: 20%;
+    }
+    .date {
+      width: 15%;
+    }
+    .actions {
+      width: 10%;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 30px;
+        border-radius: 8px;
+        background: #df1e1f;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:visited, &:link {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+
+  .case-btn{
+    display: block;
+    width: 205px;
+    height: 57px;
+    border-radius: 8px;
+    background: #df1e1f;
+    text-align: center;
+    line-height: 57px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:visited, &:link{
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+
+}

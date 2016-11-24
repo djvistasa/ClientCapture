@@ -79,6 +79,38 @@
             </div>
           </div>
         </div>
+
+        <div class="case-overview">
+          <h3>
+            Cases
+          </h3>
+
+          <div class="case-list">
+            <div class="case clearfix heading">
+              <div class="reference">
+                Reference
+              </div>
+              <div class="case-title">
+                Title
+              </div>
+              <div class="status">
+                Status
+              </div>
+              <div class="date">
+                Date
+              </div>
+              <div class="actions">
+              </div>
+            </div>
+            <div class="case-items">
+              <%= render 'home/caseList' %>
+            </div>
+          </div>
+
+          <a href="#" class="case-btn">
+            Add Case
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -97,4 +129,30 @@
           <%= f.input :avatar, as: :file %>
           <%= f.actions  %>
   <% end %>
+</div>
+<div class="formOverlay case">
+  <form id="case-form">
+    <h2>
+      Add new Case
+      <span class="close-form"></span>
+    </h2>
+
+    <label>Case Number</label>
+    <input type="text" name="case_number" />
+
+    <label>Title</label>
+    <input type="text" name="title" />
+
+    <label>Status</label>
+    <input type="text" name="status" />
+
+    <label>Date</label>
+    <input type="text" name="date" class="hasDatetimePicker" />
+
+    <input type="hidden" name="client_id" value="<%= @client.id %>" />
+
+    <button class="submit">
+      Create
+    </button>
+  </form>
 </div>

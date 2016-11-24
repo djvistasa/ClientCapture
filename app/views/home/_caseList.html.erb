@@ -1,0 +1,19 @@
+<% @cases.each do | c | %>
+    <div class="case clearfix">
+      <div class="reference">
+        <%= c.case_number %>
+      </div>
+      <div class="case-title">
+        <%= c.title %>
+      </div>
+      <div class="status">
+        <%= c.status %>
+      </div>
+      <div class="date">
+        <%= c.date %>
+      </div>
+      <div class="actions">
+        <%= link_to 'View', case_path(c.client.id , c.id ) %>
+      </div>
+    </div>
+<% end %>
