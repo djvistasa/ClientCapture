@@ -20,9 +20,9 @@ default: &default
 development:
   <<: *default
   database: Mali_development
-  #password: p5s!xxZ
+  password: p5s!xxZ
 #  password: skatans
-  #socket: /var/run/mysqld/mysqld.sock
+  socket: /var/run/mysqld/mysqld.sock
   
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
