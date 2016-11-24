@@ -86,7 +86,9 @@
 
 <div class="formOverlay client">
   <%= semantic_form_for(@client) do |f| %>
-          <h2>Add new Client</h2>
+          <h2>Edit client
+            <span class="close-form"></span>
+          </h2>
           <%= f.input :name %>
           <%= f.input :surname %>
           <%= f.input :cellnumber %>

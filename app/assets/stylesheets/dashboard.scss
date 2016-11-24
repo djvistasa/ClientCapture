@@ -91,6 +91,7 @@
     /* position: relative; */
     position: absolute;
     left: 353px;
+    height: 100%;
 
       .user-inner {
         width: 90%;
@@ -156,7 +157,7 @@
 }
 
 .formOverlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
@@ -169,7 +170,7 @@
       height: 695px;
       position: relative;
       bottom: 0;
-      top: 50px;
+      top: 25px;
       left: 0;
       right: 0;
       margin: auto;

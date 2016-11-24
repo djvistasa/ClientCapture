@@ -38,9 +38,7 @@
     width: 285px;
     min-height: 1px;
     height: auto;
-
-    margin: 0px 65px 0px 0px;
-
+    margin: 0px 34px 0px 0px;
     float: left;
 
     img {
@@ -51,13 +49,10 @@
 
   .client-details {
 
-    line-height: 60px;
-    text-indent: 25px;
-    font-size: 25px;
+    font-size: 22px;
     color: #000;
-
     float: left;
-    width: 900px;
+    width: 531px;
 
     .client-details-line {
       width: 100%;
@@ -67,7 +62,7 @@
         display: table-cell;
 
         &:first-of-type {
-          width: 190px;
+          width: 120px;
         }
 
       }
@@ -85,8 +80,9 @@
 .client form input[type=submit],
 .client form input[type=submit]:hover ,
 .client form input[type=submit]:active {
-  width: 205px;
-  height: 57px;
+  width: 160px;
+  height: 43px;
+  font-weight: normal;
   border-radius: 8px;
   background: #df1e1f;
   position: absolute;
@@ -94,7 +90,7 @@
   bottom: 20px;
   right: 20px;
   text-align: center;
-  line-height: 57px;
+  line-height: 43px;
   color: #ffffff;
   font-size: 20px;
   cursor: pointer;
@@ -115,4 +111,13 @@
   margin: auto 11px;
   height: 100px;
   resize: vertical;
+}
+
+.client li {
+  list-style-type: none;
+}
+
+.client .submit {
+  width: 160px;
+  height: 43px;
 }

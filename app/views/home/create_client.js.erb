@@ -2,3 +2,15 @@
  * Created by sive on 11/8/16.
  */
 $('.user-list').html('<%= raw escape_javascript(render partial: "home/clientsList")%>')
+
+
+$('body').on('click', '.add-client', function(){
+  $('.formOverlay').show();
+});
+$('body').on('click', '.close-form', function(){
+  $('.formOverlay').hide();
+});
+
+$('body').on('click', '.add-client', function(){
+  $('.formOverlay').show();
+});

@@ -1,19 +1,20 @@
 .header-section {
   background: #ffffff;
   width: 100%;
-  height: 357px;
+  height: 250px;
   display: block;
   position: absolute;
 
   .logo {
-    width: 348px;
+    width: 215px;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    background: url('mali.png') center;
-    height: 276px;
+    background: url(mali.png) center no-repeat;
+    /* height: 276px; */
     bottom: 0;
+    background-size: 100%;
     top: 0;
   }
 
@@ -28,7 +29,7 @@
     left: 0;
     margin: auto;
     /* border: 0; */
-    bottom: -50px;
+    bottom: -20px;
     z-index: 99;
   }
 }
@@ -39,7 +40,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  top: 357px;
+  top: 250px;
 }
 
 .form-section form {
@@ -52,17 +53,24 @@
 
     label {
       color: #fff;
-      font-size: 20px;
+      font-size: 15px;
       display: block;
     }
+
+  #flash_notice {
+    color: red;
+    position: absolute;
+    top: -50px;
+    font-size: 15px;
+  }
 }
 
 .form-section form .field.login input {
   border: none;
   background-color: white;
-  height: 50px;
-  border-radius: 10px;
-  font-size: 20px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 15px;
   width: 100%;
 }
 
@@ -71,14 +79,14 @@
   right: -20px;
   margin: 0 !important;
   width: 114px;
-  height: 47px;
+  height: 30px;
   background: #d86628;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   text-shadow: none;
   font-weight: normal;
-  font-size: 19px;
+  font-size: 15px;
   outline: none;
 }
 
@@ -125,5 +133,15 @@
 
 .bottom-wrapper {
 
+}
+
+#user_email {
+  margin-bottom: 15px;
+}
+.restLinks {
+  margin-top: -5px;
+  a {
+    font-size: 15px;
+  }
 }
 

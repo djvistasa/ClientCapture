@@ -30,20 +30,14 @@ $(document).ready(function(){
     });
 
     $('body').on('click', '.add-client', function(){
-       $('.formOverlay').css('display', 'block');
+       $('.formOverlay').show('600');
     });
     $('body').on('click', '.close-form', function(){
-       $('.formOverlay').css('display', 'none');
+       $('.formOverlay').hide('600');
     });
 
-    $('body').on('click', '.submit', function(){
-
-
-    });
-
-
-    $('body').on('click', '.add-client', function(){
-        $('.formOverlay').show();
+    $('body').on('click', '.Edit', function(){
+        $('.formOverlay').show('600');
     });
 
 });
