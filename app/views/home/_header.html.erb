@@ -9,7 +9,9 @@
     <%= @current.name + ' ' + @current.surname %>
   </div>
   <div class="session-info">
-    <%= image_tag(@current.avatar.url(:medium)) %>
+    <div class="avatar">
+      <%= image_tag(@current.avatar.url(:medium)) %>
+    </div>
     <div class="search-bar">
       <input type="text" name="search" placeholder="client search" />
     </div>
